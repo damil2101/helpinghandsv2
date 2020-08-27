@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/_services/news.service';
 import {PageChangedEvent} from 'ngx-bootstrap/pagination';
 import { News } from 'src/models/news';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FlightSearchService } from 'src/_services/flightSearch.service';
 
 @Component({
@@ -14,14 +13,10 @@ export class BlogComponent implements OnInit {
   news:News[];
   displayedNews:News[];
   totalItems:number;
-  searchFlight:FormGroup;
-  flightNumber:string;
-  flightDate:string;
-  constructor(private newsService:NewsService,private fb:FormBuilder,private flightService:FlightSearchService) { }
+
+  constructor(private newsService:NewsService) { }
 
   ngOnInit(): void {
-
-    this.createSearchFlightForm();
 
     this.newsService.getNews().subscribe(data => {
       this.totalItems = data['articles'].length;  
@@ -38,22 +33,4 @@ export class BlogComponent implements OnInit {
     this.displayedNews = this.news.filter(x=>x.urlToImage != null).slice(startItem,endItem);
   }
 
-  createSearchFlightForm(){
-    this.searchFlight = this.fb.group({
-      flightNumber:['',Validators.required],
-      //flightDate:[null,Validators.required]
-    });
-  }
-
-  getFlights(){
-    if(this.searchFlight.valid){
-      this.flightNumber = this.searchFlight.value['flightNumber'];
-      this.flightDate = this.searchFlight.value['flightDate'];
-
-      this.flightService.getFlights(this.flightNumber,this.flightDate)
-      .subscribe(data => {
-        console.log(data);
-      })
-    }
-  }
 }

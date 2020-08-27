@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YhzxdjM9kvH8TJkP2Xz7Bb85vpociaJTk5d0ZYdnPb7A68Bcsc7cjmH2u9fPoTfjKe5fdxTBN9WR/3bu2IOAKQ==",
+  "dgSpecHash": "Qmx6u5Y5dvw3U1NptyclRQ/EexOVxLnTbXufJHSG4JZdsWESRVvFlPHQedeMgjKqnr4zIC4dF+K0bXv6usQg3g==",
   "success": true,
-  "projectFilePath": "/Users/damil/Downloads/Lezir_v1.0.0/HelpingHands.api/HelpingHands.api.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/damil/Desktop/helpinghands/HelpingHands.api/HelpingHands.api.csproj",
+  "expectedPackageFiles": [
+    "/Users/damil/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

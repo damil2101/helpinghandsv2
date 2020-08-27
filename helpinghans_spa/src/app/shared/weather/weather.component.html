@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="container">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h4 class="card-title title mb-3">Current Weather</h4>
+        <p class="card-text"><i class="fa fa-map"></i> {{weather?.name}},{{weather?.sys['country']}}</p>
+        <div class="row image-txt-container">
+          <img [src]="weatherImg" style="float: left;">
+          <h5 class="card-title title pt-6" style="float: right;">{{weather?.main['temp']}} °</h5>
+        </div>
+          <h5 class="card-text">High {{weather?.main['temp_max']}} °</h5>
+          <h5 class="card-text">Low {{weather?.main['temp_min']}} °</h5>
+          <h5 class="card-text">Conditions: {{weather?.weather[0]['description']}}</h5>
+      </div>
+    </div>
+  </div>
+
+
+</section>

@@ -15,6 +15,8 @@ import {
 } from 'angular-feather/icons';
 import { ScrollspyDirective } from './scrollspy.directive';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { FlightsearchComponent } from './flightsearch/flightsearch.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 const icons = {
@@ -24,7 +26,7 @@ const icons = {
 
 @NgModule({
   // tslint:disable-next-line: max-line-length
-  declarations: [FeaturesComponent, PricingComponent, BlogComponent, ContactComponent, ServicesComponent, FooterComponent, ScrollspyDirective],
+  declarations: [FeaturesComponent, PricingComponent, BlogComponent, ContactComponent, ServicesComponent, FooterComponent, ScrollspyDirective,FlightsearchComponent,WeatherComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -34,6 +36,6 @@ const icons = {
     
   ],
   // tslint:disable-next-line: max-line-length
-  exports: [FeaturesComponent, PricingComponent, BlogComponent, ContactComponent, ServicesComponent, FooterComponent, FeatherModule, ScrollspyDirective]
+  exports: [FeaturesComponent, PricingComponent, BlogComponent, ContactComponent, ServicesComponent, FooterComponent, FeatherModule, ScrollspyDirective,FlightsearchComponent,WeatherComponent]
 })
 export class SharedModule { }

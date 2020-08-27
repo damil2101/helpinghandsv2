@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/damil/Downloads/Lezir_v1.0.0/HelpingHands.api/HelpingHands.api.csproj": {}
+    "/Users/damil/Desktop/helpinghands/HelpingHands.api/HelpingHands.api.csproj": {}
   },
   "projects": {
-    "/Users/damil/Downloads/Lezir_v1.0.0/HelpingHands.api/HelpingHands.api.csproj": {
+    "/Users/damil/Desktop/helpinghands/HelpingHands.api/HelpingHands.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/damil/Downloads/Lezir_v1.0.0/HelpingHands.api/HelpingHands.api.csproj",
+        "projectUniqueName": "/Users/damil/Desktop/helpinghands/HelpingHands.api/HelpingHands.api.csproj",
         "projectName": "HelpingHands.api",
-        "projectPath": "/Users/damil/Downloads/Lezir_v1.0.0/HelpingHands.api/HelpingHands.api.csproj",
+        "projectPath": "/Users/damil/Desktop/helpinghands/HelpingHands.api/HelpingHands.api.csproj",
         "packagesPath": "/Users/damil/.nuget/packages/",
-        "outputPath": "/Users/damil/Downloads/Lezir_v1.0.0/HelpingHands.api/obj/",
+        "outputPath": "/Users/damil/Desktop/helpinghands/HelpingHands.api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/damil/.nuget/NuGet/NuGet.Config"
@@ -35,6 +35,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

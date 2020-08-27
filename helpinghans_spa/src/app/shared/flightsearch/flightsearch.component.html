@@ -1,0 +1,83 @@
+<section class="section jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="align-items-left col-lg-6">
+        <div class="row justify-content-left">
+          <h3 class="title mb-3">Check flight status</h3>
+        </div>
+        <div class="row justify-content-left">
+            
+          <form [formGroup]="searchFlight" (ngSubmit)="getFlights()" class="form">
+            <div class="row">
+              <div class="col-lg-12 form-group">
+                <label class="control-label">Flight Number</label>
+                <input type="text" class="form-control" placeholder="Enter Flight Number" required formControlName="flightNumber">
+              </div>
+              <div class="col-lg-6 form-group">
+                <label class="label">Arrival Airport Code</label>
+                <input type="text" class="form-control" required placeholder="Enter Airport Code" formControlName="airportCode"> 
+              </div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary mt-3" type="submit" [disabled]="!searchFlight.valid">Find</button>
+            </div>     
+            
+          </form>
+    
+        </div>
+      </div>
+      <div class="align-items-right col-lg-6" *ngIf="flightData != null">
+        <div class="row justify-content-left">
+          <h5 class="title mb-3">Flight results</h5>
+        </div>
+        <div class="row justify-content-left" *ngIf="flightsFound">   
+          <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col"><i class="fa fa-plane fa-2x"></i></th>
+                    <th scope="col">Airline</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Arrival Airport</th>
+                    <th scope="col">Arrival Terminal</th>
+                    <th scope="col">Arrival Gate</th>
+                    <th scope="col">Arrival Time</th>
+                    <th scope="col">Departure Airport</th>
+                    <th scope="col">Departure Terminal</th>
+                    <th scope="col">Departure Gate</th>
+                    <th scope="col">Departure Time</th>
+                    <th scope="col">Delayed by (mins)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of flightData">
+                    <th scope="row">{{item.flight['iata']}}</th>
+                    <td>{{item.airline['name']}}</td>
+                    <td>{{item.flight_date | date}}</td>
+                    <td>{{item.flight_status}}</td>
+                    <td>{{item.arrival['airport']}} ({{item.arrival['iata']}})</td>
+                    <td>{{item.arrival['terminal']}}</td>
+                    <td>{{item.arrival['gate']}}</td>
+                    <td>{{item.arrival['scheduled'] | date:'medium'}}</td>
+                    <td>{{item.departure['airport']}} ({{item.departure['iata']}})</td>
+                    <td>{{item.departure['terminal']}}</td>
+                    <td>{{item.departure['gate']}}</td>
+                    <td>{{item.departure['scheduled'] | date:'medium'}}</td>
+                    <td>{{item.departure['delay']}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+        <div class="row justify-content-left" *ngIf="flightsFound == false">
+            <h6 class="title mb-3">No Flights Found.</h6>
+        </div>
+      </div>
+    </div>
+    
+
+
+  </div>
+  
+</section>

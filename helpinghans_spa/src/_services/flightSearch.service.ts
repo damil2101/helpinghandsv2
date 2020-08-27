@@ -11,7 +11,10 @@ export class FlightSearchService {
 
 constructor(private http:HttpClient) { }
 
-getFlights(flightNumber:string,date:string){
-  return this.http.get('http://api.aviationstock.com/v1/flights?access_key='+this.access_key+'&flight_iata='+flightNumber);
+getFlights(flightNumber:string,airportCode:string){
+  if(airportCode === null)
+    return this.http.get('http://localhost:5200/api/flightSearch/'+flightNumber);
+  else
+    return this.http.get('http://localhost:5200/api/flightSearch/flightNumber/'+flightNumber+'/airportCode/'+airportCode);
 }
 }
