@@ -9,6 +9,7 @@ import { NewsService } from 'src/_services/news.service';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { FormsModule } from '@angular/forms';
 import { FlightSearchService } from 'src/_services/flightSearch.service';
+import { EmailService } from 'src/_services/email.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { FlightSearchService } from 'src/_services/flightSearch.service';
     PaginationModule,
     FormsModule
   ],
-  providers: [NewsService,FlightSearchService],
+  providers: [NewsService,FlightSearchService,EmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

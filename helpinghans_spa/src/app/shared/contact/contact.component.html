@@ -14,18 +14,18 @@
       <div class="col-lg-7">
         <div class="custom-form mb-5 mb-lg-0">
           <div id="message"></div>
-          <form>
-            <div class="row">
+          <form [formGroup]="contactForm" (ngSubmit)="sendEmail(contactForm.value)">
+            <div class="row"> 
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="name">Name*</label>
-                  <input id="name" type="text" class="form-control" autocomplete="off" placeholder="Your name...">
+                  <input id="name" type="text" class="form-control" autocomplete="off" placeholder="Your name..." formControlName="name">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="email">Email Address*</label>
-                  <input id="email" type="email" class="form-control" autocomplete="off" placeholder="Your email...">
+                  <input id="email" type="email" class="form-control" autocomplete="off" placeholder="Your email..." formControlName="email">
                 </div>
               </div>
             </div>
@@ -33,13 +33,13 @@
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="comments">Message*</label>
-                  <textarea id="comments" rows="4" class="form-control" placeholder="Your message..."></textarea>
+                  <textarea id="comments" rows="4" class="form-control" placeholder="Your message..." formControlName="message"></textarea>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-12">
-                <button type="button" class="btn btn-primary">Send Message <i-feather class="icon-size-15 ml-2 icon"
+                <button type="submit" class="btn btn-primary" [disabled]="!contactForm?.valid">Send Message <i-feather class="icon-size-15 ml-2 icon"
                     name="send"></i-feather></button>
               </div>
             </div>

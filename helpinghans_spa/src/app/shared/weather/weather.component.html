@@ -1,16 +1,21 @@
 <section class="section">
   <div class="container">
-    <div class="card" style="width: 18rem;">
+    <div class="pricing-box rounded" style="width: 50rem;">
       <div class="card-body">
         <h4 class="card-title title mb-3">Current Weather</h4>
         <p class="card-text"><i class="fa fa-map"></i> {{weather?.name}},{{weather?.sys['country']}}</p>
         <div class="row image-txt-container">
           <img [src]="weatherImg" style="float: left;">
-          <h5 class="card-title title pt-6" style="float: right;">{{weather?.main['temp']}} °</h5>
+          <h3 class="card-title title pt-6" style="float: right;">{{weather?.main['temp']}} °</h3>
         </div>
           <h5 class="card-text">High {{weather?.main['temp_max']}} °</h5>
           <h5 class="card-text">Low {{weather?.main['temp_min']}} °</h5>
           <h5 class="card-text">Conditions: {{weather?.weather[0]['description']}}</h5>
+      </div>
+      <div class="mt-4">
+        <div class="hero-bottom-img">
+          <img src="assets/images/pricing-bottom-bg.png" alt="" class="img-fluid d-block mx-auto">
+        </div>
       </div>
     </div>
   </div>
