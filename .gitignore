@@ -2,4 +2,4 @@
 /.vscode
 bin
 obj
-/appsettings.Development.json
+appsettings.Development.json

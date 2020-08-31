@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/_services/news.service';
 import {PageChangedEvent} from 'ngx-bootstrap/pagination';
-import { News } from 'src/models/news';
+import { News } from 'src/_models/news';
 import { FlightSearchService } from 'src/_services/flightSearch.service';
 
 @Component({

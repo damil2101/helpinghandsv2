@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 
 namespace HelpingHands.api
 {
@@ -27,7 +28,14 @@ namespace HelpingHands.api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(opt => 
+            {
+                opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                opt.SerializerSettings.ContractResolver = new DefaultContractResolver 
+                    {
+                        NamingStrategy = new SnakeCaseNamingStrategy()
+                    };
+            }); // similar to using newtonsoft json .nuget
             services.AddCors();
             services.AddScoped<SmtpClient>((serviceProvider) =>
             {

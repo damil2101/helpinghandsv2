@@ -1,10 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "Qmx6u5Y5dvw3U1NptyclRQ/EexOVxLnTbXufJHSG4JZdsWESRVvFlPHQedeMgjKqnr4zIC4dF+K0bXv6usQg3g==",
+  "dgSpecHash": "ixNr5cR09yYXZ9zfvzb0etDuP7BaszujuDMqjLpiyALuG+cOsAFkZgWuBOLwLqGcU9W8W+3aWG9fUK1GA+c8FA==",
   "success": true,
   "projectFilePath": "/Users/damil/Desktop/helpinghands/HelpingHands.api/HelpingHands.api.csproj",
   "expectedPackageFiles": [
-    "/Users/damil/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+    "/Users/damil/.nuget/packages/microsoft.aspnetcore.jsonpatch/3.1.7/microsoft.aspnetcore.jsonpatch.3.1.7.nupkg.sha512",
+    "/Users/damil/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/3.1.7/microsoft.aspnetcore.mvc.newtonsoftjson.3.1.7.nupkg.sha512",
+    "/Users/damil/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.0/microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "/Users/damil/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/damil/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "/Users/damil/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/damil/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "/Users/damil/.nuget/packages/stripe.net/37.35.0/stripe.net.37.35.0.nupkg.sha512",
+    "/Users/damil/.nuget/packages/system.configuration.configurationmanager/4.5.0/system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "/Users/damil/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "/Users/damil/.nuget/packages/system.security.cryptography.protecteddata/4.5.0/system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "/Users/damil/.nuget/packages/system.security.permissions/4.5.0/system.security.permissions.4.5.0.nupkg.sha512",
+    "/Users/damil/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

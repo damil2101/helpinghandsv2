@@ -23,6 +23,7 @@
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "@nicky-lenaers/ngx-scroll-to": "^9.0.0",
+    "alertifyjs": "^1.13.1",
     "angular-feather": "^6.0.9",
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
