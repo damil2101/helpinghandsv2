@@ -52,11 +52,11 @@ namespace HelpingHands.api
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            //app.UseHttpsRedirection();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+    
             app.UseAuthorization();
              app.UseDefaultFiles(); /// finds the .html files in wwwroot folder
             app.UseStaticFiles();
