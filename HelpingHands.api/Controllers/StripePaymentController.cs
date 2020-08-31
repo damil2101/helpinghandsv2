@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using HelpingHands.api.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Stripe;
 
 namespace HelpingHands.api.Controllers
@@ -11,10 +12,16 @@ namespace HelpingHands.api.Controllers
     [Route("api/[controller]")]
     public class StripePaymentController:ControllerBase
     {
+        private readonly IConfiguration _config;
+
+        public StripePaymentController(IConfiguration config)
+        {
+            _config = config;
+        }
         [HttpPost]
         public async Task<IActionResult> StripePayment([FromBody] StripePayment paymentRequest)
         {
-            StripeConfiguration.ApiKey = "sk_test_51HMDtwGdSnL8QJo6P5x9LcJURpHDQsMvFKMbAsrMOtjRuJB4uoVtT3by4RX2zL5DEfql4pY7z1CD1IbVyW7VHpJw00FGhxemAH";
+            StripeConfiguration.ApiKey = _config.GetValue<string>("Stripe:Accesskey");
             var myCharge = new ChargeCreateOptions();
             myCharge.Source = "tok_mastercard";
             myCharge.Amount = paymentRequest.Amount;

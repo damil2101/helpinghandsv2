@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using HelpingHands.api.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace HelpingHands.api.Controllers
 {
@@ -10,11 +11,16 @@ namespace HelpingHands.api.Controllers
     [Route("api/[controller]")]
     public class FlightSearchController:ControllerBase
     {
-        
+        private readonly IConfiguration _config;
+
+        public FlightSearchController(IConfiguration config)
+        {
+            _config = config;
+        }
         [HttpGet("{flightNumber}")]
         public async Task<IActionResult> GetFlights(string flightNumber)
         {
-            string access_key = "741baf5df2a68fd47b66967d719ec172";
+            string access_key = _config.GetValue<string>("FlightSearch:Accesskey");
             HttpClient client = new HttpClient();
             try
             {
