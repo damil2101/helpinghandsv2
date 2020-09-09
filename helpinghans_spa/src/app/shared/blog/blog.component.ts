@@ -22,7 +22,6 @@ export class BlogComponent implements OnInit {
       this.totalItems = data['articles'].length;  
       
       this.news = data['articles'];
-      console.log(this.news);
       this.displayedNews = this.news.filter(x=>x.urlToImage != null).slice(0,3);        
     })
   }

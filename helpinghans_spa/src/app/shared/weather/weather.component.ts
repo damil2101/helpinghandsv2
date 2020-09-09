@@ -16,8 +16,7 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getWeather()
     .subscribe(data => {
       this.weather = data;
-      this.weatherImg = 'http://openweathermap.org/img/wn/'+this.weather.weather[0]['icon']+'@2x.png';
-      console.log(data);
+      this.weatherImg = 'https://openweathermap.org/img/wn/'+this.weather.weather[0]['icon']+'@2x.png';
     })
   }
 

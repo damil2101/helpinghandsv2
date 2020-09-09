@@ -17,7 +17,7 @@
           <img [src]="item.urlToImage" alt="" class="img-fluid d-block mx-auto rounded">
           <ul class="list-inline text-muted text-uppercase font-size-15 font-weight-medium mt-3 mb-2">
             <li class="list-inline-item mr-3">
-              <i-feather class="icon-size-15 icon mr-1" name="calendar"></i-feather>{{item.publishedAt}}
+              <i-feather class="icon-size-15 icon mr-1" name="calendar"></i-feather>{{item.publishedAt | date:'medium'}}
             </li>
           </ul>
           <a href="javascript: void(0);" class="text-dark font-weight-bold h5">{{item.title}}</a>
